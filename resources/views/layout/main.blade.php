@@ -15,7 +15,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
     <div class="container">
   <a class="navbar-brand" href="{{url('/')}}">
-  <img src="{{url('../resources/assets/mekari.png')}}" width="100" height="30" class="d-inline-block align-top" alt=""></a>
+  <img src="{{url('../storage/app/public/mekari.png')}}" width="100" height="30" class="d-inline-block align-top" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

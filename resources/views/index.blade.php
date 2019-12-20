@@ -7,9 +7,9 @@
         <div class="col-10">
             <div class="jumbotron">
                 <h1 class="display-4">Hello,</h1>
-                <p class="lead">This is a simple to do list app for Mekari assessment quiz about PHP.</p>
+                <p class="lead">This is a simple to do list app for Mekari assessment quiz about PHP. It used PHP Laravel 5.2 Frameworks and MySQL.</p>
                 <hr class="my-4">
-                <p>It used PHP Laravel 5.2 Frameworks, MySQL and AJAX.
+                <p>Created by Adhari
                 </p>
                 <p class="lead">
                 <a class="btn btn-primary btn-lg" href="{{ url('/todolists') }}" role="button">To Do List</a>
