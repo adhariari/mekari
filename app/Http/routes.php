@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'PagesController@home');
+Route::get('/todolists', 'TodolistsController@index');
+Route::post('/todolists', 'TodolistsController@store');
+Route::put('/todolists/{todo}', 'TodolistsController@update');
+Route::delete('/todolists/{todo}', 'TodolistsController@destroy');
