@@ -12,6 +12,8 @@
   </head>
   <body>
 
+
+    {{--Nav Bar--}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
     <div class="container">
   <a class="navbar-brand" href="{{url('/')}}">
@@ -42,5 +44,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
-
-@yield('script')

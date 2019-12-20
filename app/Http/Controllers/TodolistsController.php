@@ -14,19 +14,10 @@ class TodolistsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
+        //fetching all data from DB
         $todos = Todo::all();
         return view('todolists.index', compact('todos'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -36,35 +27,16 @@ class TodolistsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+
+    {   //giving validate for input to do list
         $this->validate($request, [
             'name' => 'required|max:100'
         ]);
+        //upload data to DB
         Todo::create($request->all());
         return redirect('/todolists');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -75,6 +47,7 @@ class TodolistsController extends Controller
      */
     public function update(Request $request, Todo $todo)
     {
+        //updating task to done
         Todo::where('id', $todo->id)
             ->update([
                 'is_done' => '1'
@@ -90,6 +63,7 @@ class TodolistsController extends Controller
      */
     public function destroy(Todo $todo)
     {
+        //delete task from list
         Todo::destroy($todo->id);
         return redirect('/todolists');
     }
